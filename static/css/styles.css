@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+nav ul li a.active {
+    background-color: #4CAF50;
+}
+
+.hero {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 150px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 20px 40px;
+    background-color: #fff;
+    color: #4CAF50;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #4CAF50;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.btn-lg {
+    font-size: 28px;
+    padding: 25px 50px;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    padding: 80px 20px;
+    background-color: #fff;
+}
+
+.feature {
+    text-align: center;
+    margin: 0 40px;
+    max-width: 400px;
+}
+
+.feature-icon {
+    font-size: 64px;
+    color: #4CAF50;
+    margin-bottom: 30px;
+}
+
+.feature h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.feature p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #fff;
+    color: #4CAF50;
+    border: 2px solid #4CAF50;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #4CAF50;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.8);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    font-size: 16px;
+    bottom: 0;
+}

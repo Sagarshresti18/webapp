@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}" class="active">Home</a></li>
+                <li><a href="{{ url_for('sentiment_analysis') }}">Sentiment Analysis</a></li>
+                <li><a href="{{ url_for('style_transfer') }}">Style Transfer</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to the Multimodal Content Analysis App</h1>
+                <p>Unleash the power of AI to analyze sentiments and transform text styles.</p>
+                <a href="{{ url_for('sentiment_analysis') }}" class="btn btn-primary btn-lg">Get Started</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h2>Sentiment Analysis</h2>
+                            <p>Discover the emotional tone behind text, images, and audio using advanced AI algorithms.</p>
+                            <a href="{{ url_for('sentiment_analysis') }}" class="btn btn-secondary">Try Sentiment Analysis</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-text-height"></i>
+                            </div>
+                            <h2>Style Transfer</h2>
+                            <p>Transform your text from formal to informal or vice versa, preserving the meaning while adapting the style.</p>
+                            <a href="{{ url_for('style_transfer') }}" class="btn btn-secondary">Try Style Transfer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Multimodal Content Analysis App. All rights reserved.</p>
+    </footer>
+</body>
+</html>

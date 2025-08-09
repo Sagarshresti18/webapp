@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Sentiment Analysis</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/text_sentiment_analysis.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('sentiment_analysis') }}" class="active">Sentiment Analysis</a></li>
+                <li><a href="{{ url_for('style_transfer') }}">Style Transfer</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="sentiment-analysis">
+            <div class="container">
+                <h1>Text Sentiment Analysis Result</h1>
+                <div class="result-content">
+                    <div class="result-item">
+                        <p><strong>Text:</strong></p>
+                        <p>{{ text }}</p>
+                    </div>
+                    <div class="result-item">
+                        <p><strong>Sentiment:</strong> {{ sentiment }}</p>
+                    </div>
+                    <div class="result-item">
+                        <p><strong>Confidence Score:</strong> {{ score }}</p>
+                    </div>
+                    <div class="result-item">
+                        <p><strong>Subjectivity:</strong> {{ subjectivity }}</p>
+                    </div>
+                    <div class="result-item">
+                        <p><strong>Polarity:</strong> {{ polarity }}</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="{{ url_for('sentiment_analysis') }}" class="btn btn-primary">New Analysis</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class = "footer">
+        <p>&copy; 2025 Multimodal Content Analysis App. All rights reserved.</p>
+    </footer>
+</body>
+</html>

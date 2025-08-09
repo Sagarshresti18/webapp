@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Style Transfer Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style_transfer_result.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('sentiment_analysis') }}">Sentiment Analysis</a></li>
+                <li><a href="{{ url_for('style_transfer') }}" class="active">Style Transfer</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="result">
+            <div class="container">
+                <h1>Style Transfer Result</h1>
+                <div class="result-content">
+                    <div class="result-item">
+                        <h2>Original Text:</h2>
+                        <p>{{ input_text }}</p>
+                    </div>
+                    <div class="result-item">
+                        <h2>Style Transferred Text:</h2>
+                        <p>{{ output_text }}</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="{{ url_for('style_transfer') }}" class="btn btn-primary">New Transfer</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Multimodal Content Analysis App. All rights reserved.</p>
+    </footer>
+</body>
+</html>

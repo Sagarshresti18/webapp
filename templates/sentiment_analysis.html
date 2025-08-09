@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analysis</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/sentiment_analysis.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('sentiment_analysis') }}" class="active">Sentiment Analysis</a></li>
+                <li><a href="{{ url_for('style_transfer') }}">Style Transfer</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="sentiment-analysis">
+            <div class="container">
+                <h1>Sentiment Analysis</h1>
+                <form method="POST" action="{{ url_for('sentiment_analysis') }}" enctype="multipart/form-data">
+                    <div class="input-field">
+                        <label for="modality">Select Modality:</label>
+                        <select name="modality" id="modality">
+                            <option value="text">Text</option>
+                            <option value="image">Image</option>
+                            <option value="audio">Audio</option>
+                        </select>
+                    </div>
+                    <div id="text-input" class="input-field">
+                        <textarea name="text" rows="5" cols="50" placeholder="Enter text here..."></textarea>
+                    </div>
+                    <div id="image-input" class="input-field" style="display: none;">
+                        <label for="image" class="btn btn-upload">
+                            <i class="fas fa-upload"></i> Upload Image
+                            <input type="file" name="image" accept="image/*" id="image">
+                        </label>
+                    </div>
+                    <div id="audio-input" class="input-field" style="display: none;">
+                        <label for="audio" class="btn btn-upload">
+                            <i class="fas fa-upload"></i> Upload Audio
+                            <input type="file" name="audio" accept="audio/*" id="audio">
+                        </label>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Analyze</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class = "footer">
+        <p>&copy; 2024 Multimodal Content Analysis App. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const modalitySelect = document.getElementById('modality');
+        const textInput = document.getElementById('text-input');
+        const imageInput = document.getElementById('image-input');
+        const audioInput = document.getElementById('audio-input');
+
+        modalitySelect.addEventListener('change', function() {
+            if (this.value === 'text') {
+                textInput.style.display = 'block';
+                imageInput.style.display = 'none';
+                audioInput.style.display = 'none';
+            } else if (this.value === 'image') {
+                textInput.style.display = 'none';
+                imageInput.style.display = 'block';
+                audioInput.style.display = 'none';
+            } else if (this.value === 'audio') {
+                textInput.style.display = 'none';
+                imageInput.style.display = 'none';
+                audioInput.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

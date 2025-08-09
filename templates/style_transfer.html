@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Style Transfer</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style_transfer.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('sentiment_analysis') }}">Sentiment Analysis</a></li>
+                <li><a href="{{ url_for('style_transfer') }}" class="active">Style Transfer</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="style-transfer">
+            <div class="container">
+                <h1>Style Transfer</h1>
+                <form method="POST">
+                    <div class="input-field">
+                        <textarea name="text" rows="5" cols="50" placeholder="Enter text here..." required></textarea>
+                    </div>
+                    <div class="style-options">
+                        <label class="btn btn-radio">
+                            <input type="radio" name="style" value="formal_to_informal" checked>
+                            <span class="label-text">Formal to Informal</span>
+                        </label>
+                        <label class="btn btn-radio">
+                            <input type="radio" name="style" value="informal_to_formal">
+                            <span class="label-text">Informal to Formal</span>
+                        </label>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Transfer Style</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Multimodal Content Analysis App. All rights reserved.</p>
+    </footer>
+</body>
+</html>

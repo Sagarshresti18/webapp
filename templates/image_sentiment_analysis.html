@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Sentiment Analysis</title>
+    <link rel="stylesheet" type="text/css" href="static/css/image_sentiment_analysis.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('sentiment_analysis') }}" class="active">Sentiment Analysis</a></li>
+                <li><a href="{{ url_for('style_transfer') }}">Style Transfer</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="sentiment-analysis">
+            <div class="container">
+                <h1>Image Sentiment Analysis Result</h1>
+                <div class="result-content">
+                    <div class="result-item">
+                        <img src="{{ image_path }}" alt="Uploaded Image" class="img-fluid">
+                    </div>
+                    <div class="result-item">
+                        <p><strong>Sentiment:</strong> {{ sentiment }}</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="{{ url_for('sentiment_analysis') }}" class="btn btn-primary">New Analysis</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class = "footer">
+        <p>&copy; 2025 Multimodal Content Analysis App. All rights reserved.</p>
+    </footer>
+</body>
+</html>
