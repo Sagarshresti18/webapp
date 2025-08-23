@@ -41,5 +41,5 @@ Audio Input Guidelines
 - Custom Pipelines – Rule-based or model-driven text transformation
 📦 Utilities
 - Werkzeug – Secure file uploads
-- OS – File system operations
+- OS – File system operations.
 
